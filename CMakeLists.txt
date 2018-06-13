@@ -201,6 +201,9 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
+add_executable(move_two_points src/move_two_points.cpp)
+target_link_libraries(move_two_points ${catkin_LIBRARIES})
+
 add_executable(leg_follower src/leg_follower.cpp)
 target_link_libraries(leg_follower ${catkin_LIBRARIES})
 add_dependencies(leg_follower amcl_pose leg_detector)
